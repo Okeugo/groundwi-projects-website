@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-blue: #00A3E8;
+    --brand-orange: #FF721F;
+    --brand-yellow: #F7BA1E;
+    --brand-red: #BE233D;
+  }
+  body {
+    background-color: #ffffff;
+    color: #0f172a;
+  }
+}
+
+/* Custom scrollbar matching Groundwi cyan/slate palette */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00A3E8;
+}
+

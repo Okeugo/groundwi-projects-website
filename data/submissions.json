@@ -1,0 +1,77 @@
+[
+  {
+    "id": "GW-MSG-9204",
+    "type": "general_inquiry",
+    "fullName": "Dr. Marcus Vance",
+    "company": "Vance Geoconsulting",
+    "email": "m.vance@geotech.edu",
+    "phone": "",
+    "projectLocation": "Borehole Data Integration",
+    "message": "Inquiring about OGC GeoPackage format compatibility for 3D stratigraphy models.",
+    "createdAt": "2026-09-05T22:21:07.748Z",
+    "status": "new",
+    "notificationSentTo": "okeugo.nzube@gmail.com"
+  },
+  {
+    "id": "GW-984337",
+    "type": "rfp",
+    "fullName": "Elena Rostova",
+    "company": "GeoBuild International",
+    "email": "e.rostova@geobuild-corp.com",
+    "phone": "+1 555 984 2110",
+    "projectLocation": "Plot 18A Port Industrial Zone",
+    "investigationMode": "both",
+    "services": [
+      "Geophysical Subsurface Profiling",
+      "Geotechnical Soil & Rock Mechanics"
+    ],
+    "projectStage": "Pre-FEED / Feasibility",
+    "urgency": "standard",
+    "message": "Requesting immediate desk study and ERT line profiling for multi-story foundation.",
+    "createdAt": "2026-09-05T22:20:28.362Z",
+    "status": "new",
+    "notificationSentTo": "okeugo.nzube@gmail.com",
+    "ipAddress": "127.0.0.1"
+  },
+  {
+    "id": "GW-263885",
+    "type": "rfp",
+    "fullName": "Elena Rostova, PE",
+    "company": "Vanguard Offshore Wind LLC",
+    "email": "e.rostova@vanguardwind.com",
+    "phone": "+1 800 234 5678",
+    "projectLocation": "Atlantic Coast Subsea Interconnector, Block 12",
+    "investigationMode": "both",
+    "services": [
+      "Geophysical Subsurface Profiling",
+      "Geotechnical Soil Testing"
+    ],
+    "projectStage": "Detailed Foundation Design",
+    "urgency": "expedited",
+    "message": "Requesting continuous 2D seismic reflection and multi-channel ERT along 24km export cable corridor.",
+    "createdAt": "2026-09-05T21:11:23.159Z",
+    "status": "new",
+    "notificationSentTo": "okeugo.nzube@gmail.com"
+  },
+  {
+    "id": "GW-882104",
+    "type": "rfp",
+    "fullName": "David Sterling",
+    "company": "Highland Infrastructure Partners",
+    "email": "d.sterling@highland-infra.com",
+    "phone": "+1 (555) 732-9014",
+    "projectLocation": "North Basin Industrial Corridor, Sector 4",
+    "investigationMode": "both",
+    "services": [
+      "Geophysical Subsurface Profiling",
+      "Geotechnical Soil Testing",
+      "Water Borehole Drilling & Pump Installation"
+    ],
+    "projectStage": "Pre-FEED / Feasibility",
+    "urgency": "high",
+    "message": "Need 48h desk study fatal flaw screening followed by multi-rig ERT profiling and deep CPTu soundings for a 45-hectare logistics hub.",
+    "createdAt": "2026-09-05T17:11:17.864Z",
+    "status": "new",
+    "notificationSentTo": "okeugo.nzube@gmail.com"
+  }
+]

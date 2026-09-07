@@ -1,0 +1,6 @@
+{
+  "name": "Groundwi Projects - Integrated Site Intelligence",
+  "description": "Groundwi Projects delivers integrated site investigation, geophysical subsurface profiling, geotechnical testing, EIA baseline studies, geological mapping, and unified GIS modeling with zero ground surprises.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
