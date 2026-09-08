@@ -166,7 +166,7 @@ export default function App() {
   const pageMeta = getPageMeta(activePage);
 
   return (
-    <div className="min-h-screen bg-white text-slate-900 flex flex-col font-['Plus_Jakarta_Sans',sans-serif]">
+    <div className="min-h-screen bg-white dark:bg-slate-900 text-slate-900 dark:text-white flex flex-col font-['Plus_Jakarta_Sans',sans-serif]">
       
       {/* Sticky Navigation Header */}
       <Navbar
@@ -176,7 +176,7 @@ export default function App() {
       />
 
       {/* Main Content Area */}
-      <main className="flex-1 bg-white">
+      <main className="flex-1 bg-white dark:bg-slate-900">
         
         {isHome ? (
           /* Clean Home Page with Hero and Hub Gateways */
@@ -187,10 +187,10 @@ export default function App() {
           />
         ) : (
           /* Individual Dedicated Page Container */
-          <div className="pt-24 min-h-[calc(100vh-200px)] bg-white">
+          <div className="pt-24 min-h-[calc(100vh-200px)] bg-white dark:bg-slate-900">
             
             {/* Top Breadcrumb & Page Navigation Bar */}
-            <div className="bg-white/90 backdrop-blur-md border-b border-slate-200 py-3.5 sticky top-[68px] z-30 shadow-sm">
+            <div className="bg-white dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-700 py-3.5 sticky top-[68px] z-30 shadow-sm">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                 
                 {/* Back to Home & Breadcrumb */}
@@ -198,15 +198,15 @@ export default function App() {
                   <button
                     id="back-to-home-btn"
                     onClick={() => navigateToPage('overview')}
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 hover:text-slate-900 bg-slate-100 hover:bg-slate-200 border border-slate-200 transition-colors group"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:text-white bg-slate-100 dark:bg-slate-800/50 hover:bg-slate-200 border border-slate-200 dark:border-slate-700 transition-colors group"
                   >
                     <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-0.5 transition-transform" />
                     <span>Home</span>
                   </button>
 
-                  <div className="flex items-center gap-2 text-xs text-slate-500">
+                  <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400">
                     <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
-                    <span className="flex items-center gap-1.5 text-slate-900 font-semibold">
+                    <span className="flex items-center gap-1.5 text-slate-900 dark:text-white font-semibold">
                       {pageMeta.icon}
                       <span>{pageMeta.badge}</span>
                     </span>
@@ -232,7 +232,7 @@ export default function App() {
                       className={`px-2.5 py-1 rounded-md text-xs font-medium whitespace-nowrap transition-colors ${
                         activePage === tab.id
                           ? 'bg-[#00A3E8]/10 text-[#00A3E8] border border-[#00A3E8]/30 font-bold'
-                          : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                          : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:text-white hover:bg-slate-100 dark:bg-slate-800/50'
                       }`}
                     >
                       {tab.label}

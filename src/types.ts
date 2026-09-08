@@ -1,4 +1,4 @@
-export type InvestigationMode = 'desk-study' | 'field-investigation' | 'both';
+export type InvestigationMode = 'desk-study' | 'field-investigation' | 'both' | 'water-boreholes';
 
 export interface ServiceOffering {
   id: string;
@@ -13,6 +13,7 @@ export interface ServiceOffering {
   deliverables: string[];
   icon: string;
   riskMitigated: string;
+  imageUrl?: string;
 }
 
 export interface PortfolioProject {

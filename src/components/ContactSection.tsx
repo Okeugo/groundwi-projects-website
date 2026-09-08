@@ -83,7 +83,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
     'Environmental Impact Assessment (EIA)',
     'Geological Field Mapping',
     'Topography Survey',
-    'Advanced GIS Mapping'
+    'Advanced GIS Mapping',
+    'Water Borehole Drilling'
   ];
 
   const toggleService = (srv: string) => {
@@ -160,7 +161,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
   ];
 
   return (
-    <section id="contact" className="py-20 bg-white border-t border-slate-200 relative">
+    <section id="contact" className="py-20 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-700 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -169,10 +170,10 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
             <Mail className="w-3.5 h-3.5" />
             <span>Site Inquiry & Technical Desk</span>
           </div>
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-['Space_Grotesk']">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight font-['Space_Grotesk']">
             Initiate Your Site Assessment
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-slate-600">
+          <p className="mt-3 text-sm sm:text-base text-slate-600 dark:text-slate-400">
             Submit your parcel details or request a desk study / field investigation proposal. Our principal engineers review site constraints within 4 business hours.
           </p>
         </div>
@@ -184,12 +185,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
           <div className="lg:col-span-5 space-y-6">
             
             {/* Quick Contact Card */}
-            <div className="p-6 sm:p-8 rounded-2xl bg-slate-50 border border-slate-200 space-y-6 shadow-xs">
+            <div className="p-6 sm:p-8 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-6 shadow-xs">
               <div>
                 <span className="text-[10px] uppercase font-bold tracking-widest text-[#007ea8] block mb-1">
                   Central Engineering Dispatch
                 </span>
-                <h3 className="text-xl font-black text-slate-900 font-['Space_Grotesk']">
+                <h3 className="text-xl font-black text-slate-900 dark:text-white font-['Space_Grotesk']">
                   Direct Field Contacts
                 </h3>
               </div>
@@ -200,11 +201,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                     <PhoneCall className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-[11px] text-slate-500 uppercase font-mono block">Technical Inquiry Hotline</span>
-                    <a href="tel:+18005554367" className="text-sm font-bold text-slate-900 hover:text-[#007ea8] transition-colors">
+                    <span className="text-[11px] text-slate-500 dark:text-slate-400 uppercase font-mono block">Technical Inquiry Hotline</span>
+                    <a href="tel:+18005554367" className="text-sm font-bold text-slate-900 dark:text-white hover:text-[#007ea8] transition-colors">
                       +1 (800) 555-4367
                     </a>
-                    <p className="text-[11px] text-slate-500">Direct line to Senior Geotechnical Engineer</p>
+                    <p className="text-[11px] text-slate-500 dark:text-slate-400">Direct line to Senior Geotechnical Engineer</p>
                   </div>
                 </div>
 
@@ -213,11 +214,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-[11px] text-slate-500 uppercase font-mono block">Proposals & Technical Inquiries</span>
+                    <span className="text-[11px] text-slate-500 dark:text-slate-400 uppercase font-mono block">Proposals & Technical Inquiries</span>
                     <a href="mailto:proposals@groundwiprojects.com" className="text-sm font-bold text-[#FF721F] hover:underline">
                       proposals@groundwiprojects.com
                     </a>
-                    <p className="text-[11px] text-slate-500">Attach CAD, shapefiles, or parcel KMZ</p>
+                    <p className="text-[11px] text-slate-500 dark:text-slate-400">Attach CAD, shapefiles, or parcel KMZ</p>
                   </div>
                 </div>
 
@@ -226,30 +227,30 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-[11px] text-slate-500 uppercase font-mono block">Field Operations & Rig Depots</span>
-                    <p className="text-xs font-semibold text-slate-900">Central Operations: Houston, TX • Denver, CO • Reno, NV</p>
-                    <p className="text-[11px] text-slate-500">Rapid deployment coverage across North America & International corridors</p>
+                    <span className="text-[11px] text-slate-500 dark:text-slate-400 uppercase font-mono block">Field Operations & Rig Depots</span>
+                    <p className="text-xs font-semibold text-slate-900 dark:text-white">Central Operations: Houston, TX • Denver, CO • Reno, NV</p>
+                    <p className="text-[11px] text-slate-500 dark:text-slate-400">Rapid deployment coverage across North America & International corridors</p>
                   </div>
                 </div>
               </div>
 
               {/* Accreditations Badge Row */}
-              <div className="pt-4 border-t border-slate-200 space-y-2">
-                <span className="text-[10px] uppercase font-bold text-slate-500 tracking-wider block">
+              <div className="pt-4 border-t border-slate-200 dark:border-slate-700 space-y-2">
+                <span className="text-[10px] uppercase font-bold text-slate-500 dark:text-slate-400 tracking-wider block">
                   Certified Standards & Quality Defense
                 </span>
-                <div className="flex flex-wrap gap-2 text-[10px] font-mono text-slate-700">
-                  <span className="px-2 py-1 rounded bg-white border border-slate-200 shadow-xs">ISO 9001:2015</span>
-                  <span className="px-2 py-1 rounded bg-white border border-slate-200 shadow-xs">ISO 14001</span>
-                  <span className="px-2 py-1 rounded bg-white border border-slate-200 shadow-xs">ASTM Compliant</span>
-                  <span className="px-2 py-1 rounded bg-white border border-slate-200 shadow-xs">BS 5930 / Eurocode 7</span>
+                <div className="flex flex-wrap gap-2 text-[10px] font-mono text-slate-700 dark:text-slate-300">
+                  <span className="px-2 py-1 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-xs">ISO 9001:2015</span>
+                  <span className="px-2 py-1 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-xs">ISO 14001</span>
+                  <span className="px-2 py-1 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-xs">ASTM Compliant</span>
+                  <span className="px-2 py-1 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-xs">BS 5930 / Eurocode 7</span>
                 </div>
               </div>
             </div>
 
             {/* Accordion FAQ */}
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 shadow-xs">
-              <div className="flex items-center gap-2 pb-2 border-b border-slate-200 text-xs font-bold text-slate-900 uppercase tracking-wider">
+            <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-3 shadow-xs">
+              <div className="flex items-center gap-2 pb-2 border-b border-slate-200 dark:border-slate-700 text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider">
                 <HelpCircle className="w-4 h-4 text-emerald-600" />
                 <span>Frequently Answered Questions</span>
               </div>
@@ -257,17 +258,17 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                 {faqs.map((faq, index) => {
                   const isOpen = expandedFaq === index;
                   return (
-                    <div key={index} className="rounded-xl border border-slate-200 overflow-hidden bg-white shadow-xs">
+                    <div key={index} className="rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden bg-white dark:bg-slate-900 shadow-xs">
                       <button
                         id={`faq-toggle-${index}`}
                         onClick={() => setExpandedFaq(isOpen ? null : index)}
-                        className="w-full text-left p-3 flex items-center justify-between gap-3 text-xs font-semibold text-slate-800 hover:text-slate-950"
+                        className="w-full text-left p-3 flex items-center justify-between gap-3 text-xs font-semibold text-slate-800 dark:text-slate-200 hover:text-slate-950 dark:text-white"
                       >
                         <span>{faq.q}</span>
                         {isOpen ? <ChevronUp className="w-4 h-4 text-emerald-600 shrink-0" /> : <ChevronDown className="w-4 h-4 text-slate-400 shrink-0" />}
                       </button>
                       {isOpen && (
-                        <div className="px-3 pb-3 text-xs text-slate-600 leading-relaxed border-t border-slate-100 pt-2">
+                        <div className="px-3 pb-3 text-xs text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-100 dark:border-slate-800 pt-2">
                           {faq.a}
                         </div>
                       )}
@@ -281,7 +282,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
 
           {/* Right Column: Interactive Proposal Request Form */}
           <div className="lg:col-span-7">
-            <div className="p-6 sm:p-10 rounded-2xl bg-white border border-slate-200 shadow-xl relative">
+            <div className="p-6 sm:p-10 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-xl relative">
               
               {submittedId ? (
                 /* Success Screen */
@@ -297,40 +298,40 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                     <span className="text-xs uppercase font-mono font-bold tracking-widest text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
                       Inquiry Reference: {submittedId}
                     </span>
-                    <h3 className="text-2xl font-black text-slate-900 font-['Space_Grotesk'] pt-1">
+                    <h3 className="text-2xl font-black text-slate-900 dark:text-white font-['Space_Grotesk'] pt-1">
                       Inquiry Received & Dispatched
                     </h3>
-                    <p className="text-xs sm:text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
+                    <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-md mx-auto leading-relaxed">
                       Your requirements have been recorded in the Groundwi Projects dispatch database and routed directly to our engineering team.
                     </p>
                   </div>
 
                   {/* Dispatch Route Tag */}
-                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700">
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs text-slate-700 dark:text-slate-300">
                     <BellRing className="w-3.5 h-3.5 text-[#007ea8]" />
-                    <span>Notification routed to: <strong className="text-slate-900 font-mono">{ADMIN_EMAIL}</strong></span>
+                    <span>Notification routed to: <strong className="text-slate-900 dark:text-white font-mono">{ADMIN_EMAIL}</strong></span>
                   </div>
 
-                  <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-left max-w-md mx-auto space-y-2 text-xs">
+                  <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-left max-w-md mx-auto space-y-2 text-xs">
                     <div className="flex justify-between">
-                      <span className="text-slate-500">Client Name:</span>
-                      <span className="text-slate-900 font-semibold">{formData.fullName}</span>
+                      <span className="text-slate-500 dark:text-slate-400">Client Name:</span>
+                      <span className="text-slate-900 dark:text-white font-semibold">{formData.fullName}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-slate-500">Site Location:</span>
-                      <span className="text-slate-900 font-semibold">{formData.projectLocation || 'Location Provided'}</span>
+                      <span className="text-slate-500 dark:text-slate-400">Site Location:</span>
+                      <span className="text-slate-900 dark:text-white font-semibold">{formData.projectLocation || 'Location Provided'}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-slate-500">Delivery Mode:</span>
+                      <span className="text-slate-500 dark:text-slate-400">Delivery Mode:</span>
                       <span className="text-emerald-700 font-semibold uppercase">{formData.investigationMode}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-slate-500">Contact Email:</span>
-                      <span className="text-slate-900 font-semibold">{formData.email}</span>
+                      <span className="text-slate-500 dark:text-slate-400">Contact Email:</span>
+                      <span className="text-slate-900 dark:text-white font-semibold">{formData.email}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-slate-500">Disciplines:</span>
-                      <span className="text-slate-800 font-medium">{formData.services.length} selected</span>
+                      <span className="text-slate-500 dark:text-slate-400">Disciplines:</span>
+                      <span className="text-slate-800 dark:text-slate-200 font-medium">{formData.services.length} selected</span>
                     </div>
                   </div>
 
@@ -339,7 +340,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                     <button
                       type="button"
                       onClick={copyBrief}
-                      className="px-4 py-2 rounded-xl text-xs font-semibold bg-white hover:bg-slate-100 border border-slate-200 text-slate-700 transition-colors flex items-center gap-1.5 shadow-xs"
+                      className="px-4 py-2 rounded-xl text-xs font-semibold bg-white dark:bg-slate-900 hover:bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 transition-colors flex items-center gap-1.5 shadow-xs"
                     >
                       {copiedSummary ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
                       <span>{copiedSummary ? 'Copied Brief!' : 'Copy Summary Brief'}</span>
@@ -356,7 +357,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                         services: formData.services,
                         message: formData.message,
                       })}
-                      className="px-4 py-2 rounded-xl text-xs font-bold text-slate-950 bg-gradient-to-r from-[#FF721F] to-[#F7BA1E] hover:from-[#ff8134] hover:to-[#f8c339] shadow-md shadow-orange-500/20 transition-all flex items-center gap-1.5"
+                      className="px-4 py-2 rounded-xl text-xs font-bold text-slate-950 dark:text-white bg-gradient-to-r from-[#FF721F] to-[#F7BA1E] hover:from-[#ff8134] hover:to-[#f8c339] shadow-md shadow-orange-500/20 transition-all flex items-center gap-1.5"
                     >
                       <Mail className="w-3.5 h-3.5" />
                       <span>Send Direct Email Copy</span>
@@ -381,7 +382,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                           message: ''
                         });
                       }}
-                      className="text-xs text-slate-500 hover:text-slate-900 underline transition-colors"
+                      className="text-xs text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:text-white underline transition-colors"
                     >
                       Submit Another Site Inquiry
                     </button>
@@ -395,7 +396,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                     <span className="text-[10px] uppercase font-bold tracking-widest text-emerald-700 block mb-1">
                       Request Formal Proposal
                     </span>
-                    <h3 className="text-xl sm:text-2xl font-black text-slate-900 font-['Space_Grotesk']">
+                    <h3 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white font-['Space_Grotesk']">
                       Site Assessment & Investigation Scope
                     </h3>
                   </div>
@@ -403,7 +404,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                   {/* Name & Company */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
-                      <label className="text-xs font-semibold text-slate-700">
+                      <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">
                         Full Name <span className="text-emerald-600">*</span>
                       </label>
                       <input
@@ -413,12 +414,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                         placeholder="e.g., Katherine Bell, P.E."
                         value={formData.fullName}
                         onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-emerald-500 transition-colors"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition-colors"
                       />
                     </div>
 
                     <div className="space-y-1.5">
-                      <label className="text-xs font-semibold text-slate-700">
+                      <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">
                         Organization / EPC Company <span className="text-emerald-600">*</span>
                       </label>
                       <input
@@ -428,7 +429,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                         placeholder="e.g., Apex Infrastructure Partners"
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-emerald-500 transition-colors"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition-colors"
                       />
                     </div>
                   </div>
@@ -436,7 +437,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                   {/* Email & Phone */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
-                      <label className="text-xs font-semibold text-slate-700">
+                      <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">
                         Work Email Address <span className="text-emerald-600">*</span>
                       </label>
                       <input
@@ -446,12 +447,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                         placeholder="katherine@apexpartners.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-emerald-500 transition-colors"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition-colors"
                       />
                     </div>
 
                     <div className="space-y-1.5">
-                      <label className="text-xs font-semibold text-slate-700">
+                      <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">
                         Phone Number <span className="text-emerald-600">*</span>
                       </label>
                       <input
@@ -461,7 +462,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                         placeholder="+1 (555) 349-2810"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-emerald-500 transition-colors"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition-colors"
                       />
                     </div>
                   </div>
@@ -469,7 +470,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                   {/* Project Location & Investigation Mode */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
-                      <label className="text-xs font-semibold text-slate-700">
+                      <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">
                         Site Location / GPS Coordinates <span className="text-emerald-600">*</span>
                       </label>
                       <input
@@ -479,19 +480,19 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                         placeholder="e.g., Lat: 30.2672° N, Long: 97.7431° W"
                         value={formData.projectLocation}
                         onChange={(e) => setFormData({ ...formData, projectLocation: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-emerald-500 transition-colors"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition-colors"
                       />
                     </div>
 
                     <div className="space-y-1.5">
-                      <label className="text-xs font-semibold text-slate-700">
+                      <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">
                         Delivery Mode
                       </label>
                       <select
                         id="contact-investigation-mode"
                         value={formData.investigationMode}
                         onChange={(e) => setFormData({ ...formData, investigationMode: e.target.value as InvestigationMode })}
-                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-900 focus:outline-none focus:border-emerald-500"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500"
                       >
                         <option value="both">Both Desk Study & Field Investigation (Recommended)</option>
                         <option value="desk-study">Phase 1 Desk Study Only (48-72h Screening)</option>
@@ -502,7 +503,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
 
                   {/* Multi-Select Core Disciplines */}
                   <div className="space-y-2">
-                    <label className="text-xs font-semibold text-slate-700 block">
+                    <label className="text-xs font-semibold text-slate-700 dark:text-slate-300 block">
                       Requested Capabilities (Select all applicable)
                     </label>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -517,11 +518,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                             className={`p-2.5 rounded-xl border text-left text-xs transition-all flex items-center gap-2 ${
                               checked
                                 ? 'bg-emerald-50 border-emerald-400 text-emerald-900 font-medium'
-                                : 'bg-slate-50 border-slate-200 text-slate-600 hover:text-slate-900'
+                                : 'bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:text-white'
                             }`}
                           >
                             <span className={`w-3.5 h-3.5 rounded flex items-center justify-center text-[10px] ${
-                              checked ? 'bg-emerald-500 text-white font-bold' : 'border border-slate-300'
+                              checked ? 'bg-emerald-500 text-white font-bold' : 'border border-slate-300 dark:border-slate-700'
                             }`}>
                               {checked ? '✓' : ''}
                             </span>
@@ -535,14 +536,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                   {/* Project Stage & Urgency */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
-                      <label className="text-xs font-semibold text-slate-700">
+                      <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">
                         Project Development Stage
                       </label>
                       <select
                         id="contact-project-stage"
                         value={formData.projectStage}
                         onChange={(e) => setFormData({ ...formData, projectStage: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-900 focus:outline-none focus:border-emerald-500"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500"
                       >
                         <option value="Pre-FEED / Feasibility">Pre-FEED / Land Acquisition Feasibility</option>
                         <option value="Detailed Foundation Design">Detailed Foundation Engineering & Pile Design</option>
@@ -552,14 +553,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                     </div>
 
                     <div className="space-y-1.5">
-                      <label className="text-xs font-semibold text-slate-700">
+                      <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">
                         Target Timeline / Urgency
                       </label>
                       <select
                         id="contact-urgency"
                         value={formData.urgency}
                         onChange={(e) => setFormData({ ...formData, urgency: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-900 focus:outline-none focus:border-emerald-500"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500"
                       >
                         <option value="standard">Standard Mobilization (1-2 Weeks)</option>
                         <option value="expedited">Expedited Priority (Within 5-7 Days)</option>
@@ -570,7 +571,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
 
                   {/* Message & Site Notes */}
                   <div className="space-y-1.5">
-                    <label className="text-xs font-semibold text-slate-700">
+                    <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">
                       Project Description / Known Geological Hazards / Site Notes
                     </label>
                     <textarea
@@ -579,7 +580,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                       placeholder="Specify structural loads, known site anomalies, parcel acreage, or any preliminary geotechnical reports..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-emerald-500 transition-colors"
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition-colors"
                     />
                   </div>
 
@@ -588,7 +589,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                     id="submit-contact-rfp-btn"
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-4 rounded-xl text-sm font-bold text-slate-950 bg-gradient-to-r from-[#FF721F] to-[#F7BA1E] hover:from-[#ff8134] hover:to-[#f8c339] shadow-xl shadow-orange-500/20 transition-all flex items-center justify-center gap-2 active:scale-[0.99] disabled:opacity-50"
+                    className="w-full py-4 rounded-xl text-sm font-bold text-slate-950 dark:text-white bg-gradient-to-r from-[#FF721F] to-[#F7BA1E] hover:from-[#ff8134] hover:to-[#f8c339] shadow-xl shadow-orange-500/20 transition-all flex items-center justify-center gap-2 active:scale-[0.99] disabled:opacity-50"
                   >
                     {isSubmitting ? (
                       <span>Transmitting Site Parameters...</span>
@@ -600,7 +601,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                     )}
                   </button>
 
-                  <p className="text-[10px] text-slate-500 text-center">
+                  <p className="text-[10px] text-slate-500 dark:text-slate-400 text-center">
                     All submitted site coordinates, KMZ files, and borehole logs are protected under strict Engineering Non-Disclosure Agreements (NDA).
                   </p>
 

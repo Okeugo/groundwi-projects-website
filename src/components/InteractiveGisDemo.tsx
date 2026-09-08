@@ -148,7 +148,7 @@ export const InteractiveGisDemo: React.FC = () => {
   };
 
   return (
-    <section id="interactive-gis" className="py-20 bg-white border-b border-slate-200 relative">
+    <section id="interactive-gis" className="py-20 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-700 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -158,23 +158,23 @@ export const InteractiveGisDemo: React.FC = () => {
               <Sparkles className="w-3.5 h-3.5" />
               <span>Interactive Digital Twin Demonstration</span>
             </div>
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-['Space_Grotesk']">
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight font-['Space_Grotesk']">
               One Document. Zero Ground Surprises.
             </h2>
-            <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl">
+            <p className="mt-3 text-sm sm:text-base text-slate-600 dark:text-slate-400 max-w-2xl">
               Experience our spatial data fusion platform firsthand. Toggle individual disciplines on and off to see how cross-validating geophysics, geotechnical testing, and EIA baseline data prevents multimillion-dollar site failures.
             </p>
           </div>
 
           {/* View Switcher Tabs */}
-          <div className="flex items-center p-1 rounded-xl bg-slate-100 border border-slate-200 self-start md:self-auto">
+          <div className="flex items-center p-1 rounded-xl bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 self-start md:self-auto">
             <button
               id="view-tab-cross-section"
               onClick={() => setActiveTab('cross-section')}
               className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors flex items-center gap-1.5 ${
                 activeTab === 'cross-section'
-                  ? 'bg-emerald-500 text-slate-950 shadow-sm font-bold'
-                  : 'text-slate-600 hover:text-slate-900'
+                  ? 'bg-emerald-500 text-slate-950 dark:text-white shadow-sm font-bold'
+                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:text-white'
               }`}
             >
               <Activity className="w-3.5 h-3.5" />
@@ -185,8 +185,8 @@ export const InteractiveGisDemo: React.FC = () => {
               onClick={() => setActiveTab('plan-map')}
               className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors flex items-center gap-1.5 ${
                 activeTab === 'plan-map'
-                  ? 'bg-emerald-500 text-slate-950 shadow-sm font-bold'
-                  : 'text-slate-600 hover:text-slate-900'
+                  ? 'bg-emerald-500 text-slate-950 dark:text-white shadow-sm font-bold'
+                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:text-white'
               }`}
             >
               <Compass className="w-3.5 h-3.5" />
@@ -200,16 +200,16 @@ export const InteractiveGisDemo: React.FC = () => {
           
           {/* Left Column: Layer Switchboard & Controls */}
           <div className="lg:col-span-1 space-y-4">
-            <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm space-y-4">
-              <div className="flex items-center justify-between pb-3 border-b border-slate-200">
+            <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm space-y-4">
+              <div className="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-slate-700">
                 <div className="flex items-center gap-2">
                   <Layers className="w-4 h-4 text-emerald-600" />
-                  <span className="text-xs font-bold text-slate-900 uppercase tracking-wider">Active GIS Layers</span>
+                  <span className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider">Active GIS Layers</span>
                 </div>
                 <button
                   id="reset-gis-layers-btn"
                   onClick={resetLayers}
-                  className="text-[11px] text-slate-500 hover:text-emerald-600 flex items-center gap-1"
+                  className="text-[11px] text-slate-500 dark:text-slate-400 hover:text-emerald-600 flex items-center gap-1"
                   title="Reset all layers"
                 >
                   <RotateCcw className="w-3 h-3" />
@@ -264,8 +264,8 @@ export const InteractiveGisDemo: React.FC = () => {
                       onClick={() => toggleLayer(l.key)}
                       className={`w-full text-left p-3 rounded-xl border transition-all flex items-start justify-between gap-3 ${
                         isActive
-                          ? 'bg-white border-slate-300 text-slate-900 shadow-xs'
-                          : 'bg-slate-100/70 border-slate-200 text-slate-400 hover:text-slate-700'
+                          ? 'bg-white dark:bg-slate-900 border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white shadow-xs'
+                          : 'bg-slate-100 dark:bg-slate-800/50/70 border-slate-200 dark:border-slate-700 text-slate-400 hover:text-slate-700 dark:text-slate-300'
                       }`}
                     >
                       <div className="space-y-1">
@@ -273,7 +273,7 @@ export const InteractiveGisDemo: React.FC = () => {
                           <span className={`w-2 h-2 rounded-full ${isActive ? l.color : 'bg-slate-400'}`} />
                           <span className="text-xs font-bold leading-none">{l.name}</span>
                         </div>
-                        <p className="text-[10px] text-slate-500 pl-4">{l.desc}</p>
+                        <p className="text-[10px] text-slate-500 dark:text-slate-400 pl-4">{l.desc}</p>
                       </div>
                       <div className="mt-0.5">
                         {isActive ? (
@@ -288,13 +288,13 @@ export const InteractiveGisDemo: React.FC = () => {
               </div>
 
               {/* Cross-Validation Status Box */}
-              <div className="pt-3 border-t border-slate-200">
+              <div className="pt-3 border-t border-slate-200 dark:border-slate-700">
                 <div className="p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-emerald-800 space-y-1">
                   <div className="flex items-center gap-1.5 font-bold">
                     <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
                     <span>Cross-Validation Active</span>
                   </div>
-                  <p className="text-[11px] text-slate-600">
+                  <p className="text-[11px] text-slate-600 dark:text-slate-400">
                     5/5 disciplines unified onto WGS84 / UTM Zone 14N datum. Zero vertical offset discrepancies.
                   </p>
                 </div>
@@ -410,7 +410,7 @@ export const InteractiveGisDemo: React.FC = () => {
                             id={`gis-marker-${pt.id}`}
                             className={`mb-2 px-2 py-1 rounded-md text-[10px] font-bold font-mono transition-all flex items-center gap-1 shadow-lg ${
                               isSelected
-                                ? 'bg-emerald-400 text-slate-950 scale-110 ring-2 ring-emerald-300'
+                                ? 'bg-emerald-400 text-slate-950 dark:text-white scale-110 ring-2 ring-emerald-300'
                                 : pt.riskStatus === 'critical-anomaly'
                                   ? 'bg-red-500 text-white animate-bounce ring-1 ring-red-400'
                                   : 'bg-slate-900 text-slate-300 hover:text-white border border-slate-700'
@@ -496,7 +496,7 @@ export const InteractiveGisDemo: React.FC = () => {
                           }}
                           className={`absolute -translate-x-1/2 -translate-y-1/2 p-2 rounded-full transition-all flex items-center gap-1.5 text-xs font-mono shadow-xl ${
                             isSelected
-                              ? 'bg-emerald-400 text-slate-950 scale-125 ring-4 ring-emerald-400/30 z-30 font-bold'
+                              ? 'bg-emerald-400 text-slate-950 dark:text-white scale-125 ring-4 ring-emerald-400/30 z-30 font-bold'
                               : pt.riskStatus === 'critical-anomaly'
                                 ? 'bg-red-500 text-white animate-pulse z-20'
                                 : 'bg-slate-900 text-slate-200 border border-slate-700 hover:border-emerald-400'
@@ -531,11 +531,11 @@ export const InteractiveGisDemo: React.FC = () => {
             {/* Subsurface Inspector Card: Live Data for the Selected Target */}
             <div 
               id="subsurface-inspector-card"
-              className="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-emerald-500/30 shadow-sm space-y-4"
+              className="p-5 sm:p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-emerald-500/30 shadow-sm space-y-4"
             >
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-200">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-200 dark:border-slate-700">
                 <div className="flex items-center gap-3">
-                  <div className={`p-2 rounded-xl text-slate-950 ${
+                  <div className={`p-2 rounded-xl text-slate-950 dark:text-white ${
                     selectedPoint.riskStatus === 'critical-anomaly'
                       ? 'bg-red-400'
                       : selectedPoint.riskStatus === 'monitoring-required'
@@ -546,7 +546,7 @@ export const InteractiveGisDemo: React.FC = () => {
                   </div>
                   <div>
                     <div className="flex items-center gap-2">
-                      <h4 className="text-base font-bold text-slate-900 font-['Space_Grotesk']">{selectedPoint.name}</h4>
+                      <h4 className="text-base font-bold text-slate-900 dark:text-white font-['Space_Grotesk']">{selectedPoint.name}</h4>
                       <span className={`text-[10px] font-bold uppercase px-2 py-0.5 rounded ${
                         selectedPoint.riskStatus === 'critical-anomaly'
                           ? 'bg-red-100 text-red-700 border border-red-200'
@@ -557,30 +557,30 @@ export const InteractiveGisDemo: React.FC = () => {
                         {selectedPoint.riskStatus === 'critical-anomaly' ? 'Subsurface Anomaly' : selectedPoint.riskStatus === 'monitoring-required' ? 'Design Constraint' : 'Verified Foundation Bed'}
                       </span>
                     </div>
-                    <p className="text-xs text-slate-500">{selectedPoint.discipline} • Target Depth: -{selectedPoint.depthMeters}m</p>
+                    <p className="text-xs text-slate-500 dark:text-slate-400">{selectedPoint.discipline} • Target Depth: -{selectedPoint.depthMeters}m</p>
                   </div>
                 </div>
 
                 <div className="text-right sm:text-right">
                   <span className="text-[10px] text-slate-400 uppercase font-mono block">Lithology & Strata</span>
-                  <span className="text-xs font-semibold text-slate-800">{selectedPoint.soilOrRockType}</span>
+                  <span className="text-xs font-semibold text-slate-800 dark:text-slate-200">{selectedPoint.soilOrRockType}</span>
                 </div>
               </div>
 
               {/* Data Values Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-                <div className="p-3 rounded-xl bg-white border border-slate-200 space-y-1">
-                  <span className="text-[10px] uppercase font-bold text-slate-500 tracking-wider">In-Situ Engineering Parameter</span>
+                <div className="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 space-y-1">
+                  <span className="text-[10px] uppercase font-bold text-slate-500 dark:text-slate-400 tracking-wider">In-Situ Engineering Parameter</span>
                   <p className="text-sm font-bold text-emerald-700 font-mono">{selectedPoint.keyMetric}</p>
                 </div>
-                <div className="p-3 rounded-xl bg-white border border-slate-200 space-y-1">
-                  <span className="text-[10px] uppercase font-bold text-slate-500 tracking-wider">Field Observation Details</span>
-                  <p className="text-xs text-slate-600">{selectedPoint.details}</p>
+                <div className="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 space-y-1">
+                  <span className="text-[10px] uppercase font-bold text-slate-500 dark:text-slate-400 tracking-wider">Field Observation Details</span>
+                  <p className="text-xs text-slate-600 dark:text-slate-400">{selectedPoint.details}</p>
                 </div>
               </div>
 
               {/* The "Cross-Validation" Proof Note */}
-              <div className="p-3.5 rounded-xl bg-gradient-to-r from-[#00A3E8]/10 via-slate-50 to-white border border-[#00A3E8]/30 text-xs text-slate-700 flex items-start gap-3">
+              <div className="p-3.5 rounded-xl bg-gradient-to-r from-[#00A3E8]/10 via-slate-50 to-white border border-[#00A3E8]/30 text-xs text-slate-700 dark:text-slate-300 flex items-start gap-3">
                 <CheckCircle2 className="w-4 h-4 text-[#007ea8] shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-[#007ea8] font-bold block mb-0.5">

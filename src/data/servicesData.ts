@@ -201,5 +201,37 @@ export const SERVICES_DATA: ServiceOffering[] = [
     ],
     icon: 'Globe',
     riskMitigated: 'Stops the dangerous chaos of six disparate paper reports that contradict one another; provides executives and engineers with one indisputable source of ground truth.'
+  },
+  {
+    id: 'water-borehole-drilling',
+    title: 'Water Borehole Drilling',
+    shortTag: 'Water Drilling',
+    tagline: 'Reliable groundwater extraction and monitoring wells',
+    description: 'Design, drilling, and installation of water boreholes and groundwater monitoring wells for commercial, industrial, and municipal applications.',
+    modes: ['water-boreholes'],
+    keyCapabilities: [
+      'Rotary mud and air percussion drilling for aquifers',
+      'Yield testing, step-drawdown, and continuous pumping tests',
+      'Water quality sampling and laboratory chemical analysis',
+      'Borehole equipping, pump sizing, and solar system integration'
+    ],
+    equipmentAndMethods: [
+      'Truck-Mounted Rotary/DTH Drill Rigs',
+      'Submersible pumps and variable frequency drives (VFD)',
+      'Multi-parameter water quality probes'
+    ],
+    applicableStandards: [
+      'AWWA (American Water Works Association) well standards',
+      'National Water Act drilling regulations',
+      'WHO Drinking Water Quality Guidelines'
+    ],
+    deliverables: [
+      'Drilling and Completion Log (Lithology & Construction)',
+      'Pumping Test Certificate & Sustainable Yield Recommendation',
+      'Comprehensive Water Quality Analysis Report'
+    ],
+    icon: 'Droplets',
+    riskMitigated: 'Prevents dry holes, well collapse, cross-contamination of aquifers, and under-sized pumping equipment.',
+    imageUrl: '/drilling-pic.png'
   }
 ];
