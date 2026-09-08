@@ -40,7 +40,7 @@ export const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({
   });
 
   return (
-    <section id="portfolio" className="py-20 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-700 relative">
+    <section id="portfolio" className="py-20 bg-white border-b border-slate-200 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -50,10 +50,10 @@ export const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({
               <Building2 className="w-3.5 h-3.5" />
               <span>Proven Field Track Record</span>
             </div>
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight font-['Space_Grotesk']">
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-['Space_Grotesk']">
               Portfolio & Project Case Studies
             </h2>
-            <p className="mt-3 text-sm sm:text-base text-slate-600 dark:text-slate-400 max-w-2xl">
+            <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl">
               Defensible site characterizations that prevented structural failures, unlocked environmental permits, and eliminated costly ground surprises across critical infrastructure.
             </p>
           </div>
@@ -67,7 +67,7 @@ export const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({
               placeholder="Search projects or services..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-9 pr-4 py-2 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-[#00A3E8] transition-colors"
+              className="w-full pl-9 pr-4 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#00A3E8] transition-colors"
             />
           </div>
         </div>
@@ -81,8 +81,8 @@ export const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({
               onClick={() => setActiveSector(sector)}
               className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-colors ${
                 activeSector === sector
-                  ? 'bg-gradient-to-r from-[#00A3E8] to-[#38bdf8] text-slate-950 dark:text-white font-bold shadow-sm'
-                  : 'bg-slate-100 dark:bg-slate-800/50 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700'
+                  ? 'bg-gradient-to-r from-[#00A3E8] to-[#38bdf8] text-slate-950 font-bold shadow-sm'
+                  : 'bg-slate-100 text-slate-600 hover:text-slate-900 border border-slate-200'
               }`}
             >
               {sector}
@@ -96,10 +96,10 @@ export const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({
             <div
               key={project.id}
               id={`project-card-${project.id}`}
-              className="group rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:border-[#00A3E8]/50 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-100/50"
+              className="group rounded-2xl bg-white border border-slate-200 hover:border-[#00A3E8]/50 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-100/50"
             >
               {/* Image & Sector Overlay */}
-              <div className="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-100 dark:bg-slate-800/50">
+              <div className="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-100">
                 <img
                   src={project.imageUrl}
                   alt={project.title}
@@ -110,14 +110,14 @@ export const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({
                 
                 {/* Sector Chip */}
                 <div className="absolute top-3 left-3">
-                  <span className="text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-md bg-white dark:bg-slate-900/90 text-[#007ea8] border border-slate-200 dark:border-slate-700 backdrop-blur-sm shadow-xs">
+                  <span className="text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-md bg-white/90 text-[#007ea8] border border-slate-200 backdrop-blur-sm shadow-xs">
                     {project.clientSector}
                   </span>
                 </div>
 
                 {/* ROI Badge */}
                 <div className="absolute bottom-3 right-3">
-                  <span className="text-xs font-black px-2.5 py-1 rounded-md bg-gradient-to-r from-[#FF721F] to-[#F7BA1E] text-slate-950 dark:text-white shadow-md">
+                  <span className="text-xs font-black px-2.5 py-1 rounded-md bg-gradient-to-r from-[#FF721F] to-[#F7BA1E] text-slate-950 shadow-md">
                     {project.roiMetric}
                   </span>
                 </div>
@@ -126,7 +126,7 @@ export const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({
               {/* Card Body */}
               <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                 <div className="space-y-2">
-                  <div className="flex items-center gap-2 text-[11px] text-slate-500 dark:text-slate-400">
+                  <div className="flex items-center gap-2 text-[11px] text-slate-500">
                     <MapPin className="w-3.5 h-3.5 text-slate-400" />
                     <span>{project.location}</span>
                     <span>•</span>
@@ -134,25 +134,25 @@ export const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({
                     <span>{project.dateCompleted}</span>
                   </div>
 
-                  <h3 className="text-base font-bold text-slate-900 dark:text-white group-hover:text-[#007ea8] transition-colors line-clamp-2">
+                  <h3 className="text-base font-bold text-slate-900 group-hover:text-[#007ea8] transition-colors line-clamp-2">
                     {project.title}
                   </h3>
 
-                  <p className="text-xs text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed">
+                  <p className="text-xs text-slate-600 line-clamp-3 leading-relaxed">
                     {project.challenge}
                   </p>
                 </div>
 
                 {/* Services Chips */}
-                <div className="pt-3 border-t border-slate-100 dark:border-slate-800 space-y-3">
+                <div className="pt-3 border-t border-slate-100 space-y-3">
                   <div className="flex flex-wrap gap-1.5">
                     {project.servicesApplied.slice(0, 3).map((s, idx) => (
-                      <span key={idx} className="text-[10px] px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800/50 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+                      <span key={idx} className="text-[10px] px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200">
                         {s.split(' ')[0]}
                       </span>
                     ))}
                     {project.servicesApplied.length > 3 && (
-                      <span className="text-[10px] px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800/50 text-slate-500 dark:text-slate-400">
+                      <span className="text-[10px] px-1.5 py-0.5 rounded bg-slate-100 text-slate-500">
                         +{project.servicesApplied.length - 3} more
                       </span>
                     )}
@@ -170,7 +170,7 @@ export const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({
                     <button
                       id={`project-rfp-btn-${project.id}`}
                       onClick={() => onSelectProjectForRFP(project.title)}
-                      className="text-xs text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:text-white font-medium"
+                      className="text-xs text-slate-500 hover:text-slate-900 font-medium"
                     >
                       Inquire Similar Scope
                     </button>
@@ -189,7 +189,7 @@ export const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({
           id="project-detail-modal" 
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm overflow-y-auto"
         >
-          <div className="relative w-full max-w-3xl rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-2xl overflow-hidden my-8 animate-in fade-in zoom-in-95">
+          <div className="relative w-full max-w-3xl rounded-2xl bg-white border border-slate-200 shadow-2xl overflow-hidden my-8 animate-in fade-in zoom-in-95">
             
             {/* Modal Image Header */}
             <div className="relative h-60 sm:h-72 w-full bg-slate-900">
@@ -210,7 +210,7 @@ export const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({
 
               <div className="absolute bottom-4 left-6 right-6">
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-[11px] font-bold uppercase px-2.5 py-0.5 rounded bg-emerald-400 text-slate-950 dark:text-white">
+                  <span className="text-[11px] font-bold uppercase px-2.5 py-0.5 rounded bg-emerald-400 text-slate-950">
                     {selectedProject.clientSector}
                   </span>
                   <span className="text-xs text-slate-200 flex items-center gap-1">
@@ -228,27 +228,27 @@ export const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({
             <div className="p-6 sm:p-8 space-y-6 text-xs sm:text-sm">
               
               {/* Quantified Technical Data Bar */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-center">
                 <div>
-                  <span className="text-[10px] text-slate-500 dark:text-slate-400 uppercase block font-mono">Boreholes / CPT</span>
+                  <span className="text-[10px] text-slate-500 uppercase block font-mono">Boreholes / CPT</span>
                   <span className="text-sm font-bold text-emerald-700 font-mono">
                     {selectedProject.technicalData.boreholesOrSoundings ?? 'N/A'}
                   </span>
                 </div>
                 <div>
-                  <span className="text-[10px] text-slate-500 dark:text-slate-400 uppercase block font-mono">Geophysics Lines</span>
+                  <span className="text-[10px] text-slate-500 uppercase block font-mono">Geophysics Lines</span>
                   <span className="text-sm font-bold text-[#007ea8] font-mono">
                     {selectedProject.technicalData.profileLineKm ? `${selectedProject.technicalData.profileLineKm} km` : 'Comprehensive'}
                   </span>
                 </div>
                 <div>
-                  <span className="text-[10px] text-slate-500 dark:text-slate-400 uppercase block font-mono">Depth Investigated</span>
-                  <span className="text-sm font-bold text-slate-900 dark:text-white font-mono">
+                  <span className="text-[10px] text-slate-500 uppercase block font-mono">Depth Investigated</span>
+                  <span className="text-sm font-bold text-slate-900 font-mono">
                     {selectedProject.technicalData.depthInvestigated ?? '30m+'}
                   </span>
                 </div>
                 <div>
-                  <span className="text-[10px] text-slate-500 dark:text-slate-400 uppercase block font-mono">Footprint Area</span>
+                  <span className="text-[10px] text-slate-500 uppercase block font-mono">Footprint Area</span>
                   <span className="text-sm font-bold text-amber-600 font-mono">
                     {selectedProject.technicalData.areaCovered ?? 'Site Parcel'}
                   </span>
@@ -261,7 +261,7 @@ export const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({
                   <ShieldCheck className="w-4 h-4 text-red-600" />
                   Site Challenge & Subsurface Risk
                 </h4>
-                <p className="text-slate-700 dark:text-slate-300 leading-relaxed bg-red-50/50 p-4 rounded-xl border border-red-100">
+                <p className="text-slate-700 leading-relaxed bg-red-50/50 p-4 rounded-xl border border-red-100">
                   {selectedProject.challenge}
                 </p>
               </div>
@@ -272,7 +272,7 @@ export const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({
                   <Layers className="w-4 h-4 text-emerald-700" />
                   Integrated Multi-Disciplinary Solution
                 </h4>
-                <p className="text-slate-700 dark:text-slate-300 leading-relaxed bg-emerald-50/40 p-4 rounded-xl border border-emerald-100">
+                <p className="text-slate-700 leading-relaxed bg-emerald-50/40 p-4 rounded-xl border border-emerald-100">
                   {selectedProject.integratedSolution}
                 </p>
               </div>
@@ -285,7 +285,7 @@ export const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({
                 </h4>
                 <div className="space-y-2">
                   {selectedProject.defensibleOutcomes.map((outcome, idx) => (
-                    <div key={idx} className="flex items-start gap-2.5 text-slate-800 dark:text-slate-200">
+                    <div key={idx} className="flex items-start gap-2.5 text-slate-800">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                       <span>{outcome}</span>
                     </div>
@@ -295,10 +295,10 @@ export const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({
 
               {/* GIS Layers Fused */}
               <div>
-                <h4 className="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider mb-2">GIS Digital Twin Layers Fused:</h4>
+                <h4 className="text-xs font-bold text-slate-600 uppercase tracking-wider mb-2">GIS Digital Twin Layers Fused:</h4>
                 <div className="flex flex-wrap gap-2">
                   {selectedProject.layersUsed.map((layer, idx) => (
-                    <span key={idx} className="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-100 dark:bg-slate-800/50 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+                    <span key={idx} className="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-100 text-slate-700 border border-slate-200">
                       {layer}
                     </span>
                   ))}
@@ -308,11 +308,11 @@ export const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({
             </div>
 
             {/* Modal Footer */}
-            <div className="p-6 bg-slate-50 dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between gap-4">
+            <div className="p-6 bg-slate-50 border-t border-slate-200 flex items-center justify-between gap-4">
               <button
                 id="close-modal-footer-btn"
                 onClick={() => setSelectedProject(null)}
-                className="text-xs font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:text-white"
+                className="text-xs font-semibold text-slate-600 hover:text-slate-900"
               >
                 Close Case Study
               </button>
@@ -322,7 +322,7 @@ export const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({
                   onSelectProjectForRFP(selectedProject.title);
                   setSelectedProject(null);
                 }}
-                className="px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold text-slate-950 dark:text-white bg-gradient-to-r from-[#FF721F] to-[#F7BA1E] hover:from-[#ff8134] hover:to-[#f8c339] shadow-md shadow-orange-500/20 transition-all flex items-center gap-2"
+                className="px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold text-slate-950 bg-gradient-to-r from-[#FF721F] to-[#F7BA1E] hover:from-[#ff8134] hover:to-[#f8c339] shadow-md shadow-orange-500/20 transition-all flex items-center gap-2"
               >
                 <span>Request Scope for Similar Site</span>
                 <ArrowRight className="w-4 h-4" />

@@ -29,13 +29,3 @@
   background: #00A3E8;
 }
 
-
-@layer base {
-  .dark {
-    color-scheme: dark;
-  }
-  .dark body {
-    background-color: #0f172a;
-    color: #f8fafc;
-  }
-}
