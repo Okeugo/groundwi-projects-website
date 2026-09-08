@@ -7,7 +7,6 @@ import {
   CheckCircle2,
   FileCheck2
 } from 'lucide-react';
-import { GroundwiLogo } from './GroundwiLogo';
 import { submitNewsletterSubscription } from '../lib/api';
 
 interface FooterProps {
@@ -82,10 +81,7 @@ export const Footer: React.FC<FooterProps> = ({
           {/* Col 1 & 2: Brand Identity & Value Statement */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="p-1 rounded-xl bg-white border border-slate-200 shadow-xs">
-                <GroundwiLogo size={36} />
-              </div>
-              <span className="font-extrabold text-xl tracking-tight text-slate-900 font-['Space_Grotesk']">
+              <span className="font-extrabold text-base tracking-tight text-slate-900 font-['Space_Grotesk']">
                 Groundwi <span className="text-[#007ea8]">Projects</span>
               </span>
             </div>
@@ -93,13 +89,6 @@ export const Footer: React.FC<FooterProps> = ({
             <p className="text-xs text-slate-600 leading-relaxed max-w-sm">
               Consolidating geophysical subsurface profiling, geotechnical soil testing, EIA baseline studies, geological mapping, and topography into one defensible, cross-validated digital ground model.
             </p>
-
-            <div className="p-3.5 rounded-xl bg-white border border-slate-200 max-w-sm space-y-1 shadow-xs">
-              <span className="text-[10px] uppercase font-bold text-[#007ea8] font-mono block">Operating Motto</span>
-              <p className="text-xs font-bold text-slate-900">
-                &ldquo;One Team. One Document. Zero Ground Surprises.&rdquo;
-              </p>
-            </div>
 
             <div className="pt-2 text-slate-500 text-[11px]">
               Licensed Professional Engineers (PE) & Professional Geologists (PG).
